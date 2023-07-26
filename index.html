@@ -50,10 +50,11 @@
     <header class="mx-auto max-w-screen-xl mb-52">
       <!-- Navbar -->
       <nav>
+        <!-- Large device -->
         <div
-          class="flex justify-between items-center lg:bg-primary rounded-[600px] p-7 my-0 lg:my-12"
+          class="lg:flex justify-between items-center bg-primary rounded-[600px] p-7 my-12 hidden"
         >
-          <div class="hidden lg:flex md:text-white">
+          <div class="flex md:text-white">
             <ul
               class="flex justify-between gap-7 text-xl font-medium cursor-pointer"
             >
@@ -63,29 +64,13 @@
               <li><a>All Fruits</a></li>
             </ul>
           </div>
-          <div class="flex items-center justify-center gap-44">
-            <div class="flex gap-3 items-center">
-              <img class="w-10" src="images/logo.png" alt="" /><a
-                class="font-bold text-3xl lg:text-4xl lg:text-white mr-5"
-                >Fruit Burst</a
-              >
-            </div>
-            <div class="dropdown">
-              <label tabindex="0" class="lg:hidden">
-                <i class="text-xl fa-solid fa-bars"></i>
-              </label>
-              <ul
-                tabindex="0"
-                class="flex flex-col gap-4 font-medium cursor-pointer dropdown-content mt-3 z-[1] p-2 w-32 bg-none md:text-xl right-0 text-right text-primary"
-              >
-                <li><a>Home</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
-              </ul>
-            </div>
+          <div class="flex gap-3 items-center ">
+            <img class="w-10" src="images/logo.png" alt="" /><a
+              class="font-bold text-3xl lg:text-4xl lg:text-white mr-5"
+              >Fruit Burst</a
+            >
           </div>
-          <div class="relative hidden lg:flex lg:items-center">
+          <div class="relative flex items-center">
             <input
               class="relative min-w-[300px] h-12 rounded-[50px] px-5 outline-none"
               type="input"
@@ -96,11 +81,34 @@
             ></i>
           </div>
         </div>
+        <!-- Mobile device -->
+        <div class="flex items-center justify-between  lg:hidden p-5">
+          <div class="navbar-start flex gap-3 items-center">
+            <img class="w-10" src="images/logo.png" alt="" /><a
+              class="font-bold text-3xl mr-5"
+              >Fruit Burst</a
+            >
+          </div>
+          <div class="dropdown">
+            <label tabindex="0" class="lg:hidden">
+              <i class="text-xl fa-solid fa-bars"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="flex flex-col gap-4 font-medium cursor-pointer dropdown-content mt-3 z-[1] p-2 w-32 bg-none md:text-xl right-0 text-right text-primary"
+            >
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div class="relative">
         <!-- Banner Section -->
         <div class="mx-auto max-w-screen-xl my-20">
-          <div class="carousel h-[800px] md:h-auto">
+          <div class="carousel">
             <!-- Banner-1 -->
             <div
               id="banner1"
@@ -109,35 +117,35 @@
               <div class="relative">
                 <img class="" src="images/banner1.png" alt="" />
                 <div
-                  class="absolute top-0 left-0 bg-gradient-to-r from-black to-transparent opacity-50"
+                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-50"
                 ></div>
               </div>
               <div
-                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mx-6"
+                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 md:mx-6"
               >
                 <a
                   href="#banner4"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❮</a
                 >
                 <div
-                  class="flex flex-col gap-6 items-center text-center text-white"
+                  class="flex flex-col gap-3 md:gap-4 lg:gap-6 items-center text-center text-white"
                 >
-                  <h1 class="text-7xl font-garamond font-extrabold">
+                  <h1 class="text-3xl md:text-5xl lg:text-7xl font-garamond font-extrabold">
                     Exotic tastes at your <br />doorstep
                   </h1>
-                  <p class="text-xl font-medium">
+                  <p class="md:text-lg lg:text-xl font-medium">
                     We supply highly quality organic products
                   </p>
                   <button
-                    class="bg-primary hover:bg-secondary text-white px-6 py-4 rounded-lg text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
+                    class="bg-primary hover:bg-secondary text-white p-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-lg  md:text-lg lg:text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
                   >
                     Shop Now
                   </button>
                 </div>
                 <a
                   href="#banner2"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❯</a
                 >
               </div>
@@ -148,37 +156,37 @@
               class="carousel-item relative w-full h-full justify-center"
             >
               <div class="relative">
-                <img src="images/banner2.png" alt="" />
+                <img class="" src="images/banner2.png" alt="" />
                 <div
-                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent opacity-50"
+                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-70"
                 ></div>
               </div>
               <div
-                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mx-6"
+                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 md:mx-6"
               >
                 <a
                   href="#banner1"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❮</a
                 >
                 <div
-                  class="flex flex-col gap-6 items-center text-center text-white"
+                  class="flex flex-col gap-3 md:gap-4 lg:gap-6 items-center text-center text-white"
                 >
-                  <h1 class="text-7xl font-garamond font-extrabold">
+                  <h1 class="text-3xl md:text-5xl lg:text-7xl font-garamond font-extrabold">
                     Exotic tastes at your <br />doorstep
                   </h1>
-                  <p class="text-xl font-medium">
+                  <p class="md:text-lg lg:text-xl font-medium">
                     We supply highly quality organic products
                   </p>
                   <button
-                  class="bg-primary hover:bg-secondary text-white px-6 py-4 rounded-lg text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
+                    class="bg-primary hover:bg-secondary text-white p-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-lg  md:text-lg lg:text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
                   >
                     Shop Now
                   </button>
                 </div>
                 <a
                   href="#banner3"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❯</a
                 >
               </div>
@@ -189,37 +197,37 @@
               class="carousel-item relative w-full h-full justify-center"
             >
               <div class="relative">
-                <img src="images/banner3.png" alt="" />
+                <img class="" src="images/banner3.png" alt="" />
                 <div
-                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent opacity-50"
+                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-70"
                 ></div>
               </div>
               <div
-                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mx-6"
+                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 md:mx-6"
               >
                 <a
                   href="#banner2"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❮</a
                 >
                 <div
-                  class="flex flex-col gap-6 items-center text-center text-white"
+                  class="flex flex-col gap-3 md:gap-4 lg:gap-6 items-center text-center text-white"
                 >
-                  <h1 class="text-7xl font-garamond font-extrabold">
+                  <h1 class="text-3xl md:text-5xl lg:text-7xl font-garamond font-extrabold">
                     Exotic tastes at your <br />doorstep
                   </h1>
-                  <p class="text-xl font-medium">
+                  <p class="md:text-lg lg:text-xl font-medium">
                     We supply highly quality organic products
                   </p>
                   <button
-                  class="bg-primary hover:bg-secondary text-white px-6 py-4 rounded-lg text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
+                    class="bg-primary hover:bg-secondary text-white p-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-lg  md:text-lg lg:text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
                   >
                     Shop Now
                   </button>
                 </div>
                 <a
                   href="#banner4"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❯</a
                 >
               </div>
@@ -230,37 +238,37 @@
               class="carousel-item relative w-full h-full justify-center"
             >
               <div class="relative">
-                <img src="images/banner4.png" alt="" />
+                <img class="" src="images/banner4.png" alt="" />
                 <div
-                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-transparent opacity-50"
+                  class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-80"
                 ></div>
               </div>
               <div
-                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mx-6"
+                class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 md:mx-6"
               >
                 <a
                   href="#banner3"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❮</a
                 >
                 <div
-                  class="flex flex-col gap-6 items-center text-center text-white"
+                  class="flex flex-col gap-3 md:gap-4 lg:gap-6 items-center text-center text-white"
                 >
-                  <h1 class="text-7xl font-garamond font-extrabold">
+                  <h1 class="text-3xl md:text-5xl lg:text-7xl font-garamond font-extrabold">
                     Exotic tastes at your <br />doorstep
                   </h1>
-                  <p class="text-xl font-medium">
+                  <p class="md:text-lg lg:text-xl font-medium">
                     We supply highly quality organic products
                   </p>
                   <button
-                  class="bg-primary hover:bg-secondary text-white px-6 py-4 rounded-lg text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
+                    class="bg-primary hover:bg-secondary text-white p-4 py-2 md:px-5 md:py-3 lg:px-6 lg:py-4 rounded-lg  md:text-lg lg:text-xl font-extrabold lg:mb-20 border-2 border-transparent hover:border-primary hover:text-primary"
                   >
                     Shop Now
                   </button>
                 </div>
                 <a
                   href="#banner1"
-                  class="bg-secondary text-white text-2xl p-4 rounded-full"
+                  class="bg-secondary text-white md:text-xl lg:text-2xl px-2 py-1 md:px-4 md:py-2 rounded-full"
                   >❯</a
                 >
               </div>
@@ -268,8 +276,9 @@
           </div>
         </div>
         <!-- banner fruits -->
-        <div
-          class="absolute bg-white lg:flex justify-between gap-14 items-center flex-col md:flex-row rounded-lg text-center px-16 py-10 -bottom-28 left-32 mx-auto hidden"
+        <div class=" flex items-center justify-center">
+          <div
+          class="absolute bg-white lg:flex justify-between gap-14 items-center flex-col md:flex-row rounded-lg text-center px-16 py-10 hidden -bottom-5 w-3/4"
         >
           <!-- Grape -->
           <div>
@@ -296,6 +305,7 @@
             <img src="images/pomegranate.png" alt="" />
             <p class="text-secondary text-xl font-medium">Pomegranate</p>
           </div>
+        </div>
         </div>
       </div>
     </header>
@@ -363,9 +373,9 @@
               Details
             </button>
             <dialog id="apple" class="modal modal-bottom sm:modal-middle">
-              <form method="dialog" class="modal-box">
+              <form method="dialog" class="modal-box w-3/4 md:w-auto mx-auto my-auto">
                 <div
-                  class="flex flex-col gap-5 p-8 md:p-5 items-center justify-center  rounded-xl"
+                  class="flex flex-col gap-5 md:w-auto lg:p-8 md:p-5 items-center justify-center  rounded-xl"
                 >
                   <img class="w-24" src="images/apple.png" alt="" />
                   <h4 class="text-2xl font-bold m-4">Apple</h4>
@@ -404,7 +414,7 @@
               Details
             </button>
             <dialog id="orange" class="modal modal-bottom sm:modal-middle">
-              <form method="dialog" class="modal-box">
+              <form method="dialog" class="modal-box w-3/4 md:w-auto mx-auto my-auto">
                 <div
                   class="flex flex-col gap-5 p-8 md:p-5 items-center justify-center rounded-xl"
                 >
@@ -445,7 +455,7 @@
               Details
             </button>
             <dialog id="dragon" class="modal modal-bottom sm:modal-middle">
-              <form method="dialog" class="modal-box">
+              <form method="dialog" class="modal-box w-3/4 md:w-auto mx-auto my-auto">
                 <div
                   class="flex flex-col gap-5 p-8 md:p-5 items-center justify-center rounded-xl"
                 >
@@ -486,7 +496,7 @@
               Details
             </button>
             <dialog id="banana" class="modal modal-bottom sm:modal-middle">
-              <form method="dialog" class="modal-box">
+              <form method="dialog" class="modal-box w-3/4 md:w-auto mx-auto my-auto">
                 <div
                   class="flex flex-col gap-5 p-8 md:p-5 items-center justify-center rounded-xl"
                 >
