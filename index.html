@@ -70,14 +70,15 @@
               >Fruit Burst</a
             >
           </div>
+          <!-- Search Box -->
           <div class="relative flex items-center">
             <input
-              class="relative min-w-[300px] h-12 rounded-[50px] px-5 outline-none"
+              class="relative min-w-[300px] h-12 rounded-[50px] pl-4 pr-9 outline-none"
               type="input"
               placeholder="Search Here"
             />
             <i
-              class="relative right-7 fa-solid fa-magnifying-glass cursor-pointer"
+              class="relative right-8 fa-solid fa-magnifying-glass cursor-pointer text-xl hover:text-primary"
             ></i>
           </div>
         </div>
@@ -95,18 +96,17 @@
             </label>
             <ul
               tabindex="0"
-              class="flex flex-col gap-4 font-medium cursor-pointer dropdown-content mt-3 z-[1] p-2 w-32 bg-none md:text-xl right-0 text-right bg-white rounded-l-lg"
+              class="flex flex-col gap-4 font-medium cursor-pointer dropdown-content mt-3 z-[1] p-2 w-32 bg-none md:text-xl right-0  bg-white rounded-l-lg text-center"
             >
               <li class="hover:text-primary"><a>Home</a></li>
               <li class="hover:text-primary"><a>About Us</a></li>
               <li class="hover:text-primary"><a>Shop</a></li>
               <li class="hover:text-primary"><a>All Fruits</a></li>
-              
               <button
-                class="text-white text-right bg-primary px-3 py-2 rounded-lg"
+                class="text-white text-center bg-primary px-3 py-2 rounded-lg"
                 onclick="search.showModal()"
               >
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass "></i>
               Search 
               </button>
               <dialog id="search" class=" mx-auto bg-white shadow-lg rounded-xl">
@@ -116,12 +116,12 @@
                   </div>
                     <div class="relative flex items-center justify-center ">
                     <input
-                      class="relative [bg-base-300] h-12 rounded-[300px] px-5 outline-none border-2 border-primary"
+                      class="relative [bg-base-300] h-12 rounded-[300px] pl-4 pr-9 outline-none border-2 border-primary"
                       type="input"
                       placeholder="Search Here"
                     />
                     <i
-                      class="relative right-8 fa-solid fa-magnifying-glass cursor-pointer hover:text-primary"
+                      class="relative right-8 text-xl fa-solid fa-magnifying-glass cursor-pointer hover:text-primary"
                     ></i>
                     </div>
                   </div>
