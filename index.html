@@ -90,7 +90,7 @@
             >
           </div>
           <div class="dropdown">
-            <label tabindex="0" class="lg:hidden">
+            <label tabindex="0" class="">
               <i class="text-xl fa-solid fa-bars"></i>
             </label>
             <ul
@@ -101,6 +101,32 @@
               <li class="hover:text-primary"><a>About Us</a></li>
               <li class="hover:text-primary"><a>Shop</a></li>
               <li class="hover:text-primary"><a>All Fruits</a></li>
+              
+              <button
+                class="text-white text-right bg-primary px-3 py-2 rounded-lg"
+                onclick="search.showModal()"
+              >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search 
+              </button>
+              <dialog id="search" class=" mx-auto bg-white shadow-lg rounded-xl">
+                <form method="dialog" class="px-5 pb-5">
+                  <div class="modal-action items-start mt-0 ">
+                    <button class="hover:text-primary ">X</button>
+                  </div>
+                    <div class="relative flex items-center justify-center ">
+                    <input
+                      class="relative [bg-base-300] h-12 rounded-[300px] px-5 outline-none border-2 border-primary"
+                      type="input"
+                      placeholder="Search Here"
+                    />
+                    <i
+                      class="relative right-8 fa-solid fa-magnifying-glass cursor-pointer hover:text-primary"
+                    ></i>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
             </ul>
           </div>
         </div>
@@ -787,7 +813,7 @@
             alt=""
           />
           <div
-            class="absolute top-0 left-0 w-full h-[1050px] md:h-[550px] lg:h-full bg-gradient-to-t from-black to-transparent opacity-70 rounded-xl"
+            class="absolute top-0 left-0 w-full h-[1050px] md:h-[550px] lg:h-full bg-black opacity-50 rounded-xl"
           ></div>
           <div
             class="absolute flex flex-col justify-center items-center top-0 left-0 w-full h-full text-white text-center py-16"
